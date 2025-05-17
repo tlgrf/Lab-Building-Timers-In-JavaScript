@@ -1,6 +1,7 @@
 const { countdownTimer } = require('../src/countdown')
 
 jest.useFakeTimers()
+jest.spyOn(global, 'clearInterval') //ADDED THIS HERE
 
 describe('countdownTimer', () => {
   test('should log remaining time at intervals and stop at 0', () => {
